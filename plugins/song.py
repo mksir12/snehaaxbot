@@ -24,7 +24,7 @@ def time_to_seconds(time):
 
 ## Commands --------
 
-@Client.on_message(filters.command(['start']))
+@Client.on_message(filters.command(['suha']))
 
 async def start(client, message):
 
