@@ -16,3 +16,5 @@ wget
 aiofiles
 youtubesearchpython
 youtube_dl
+pyrogram.errors
+pyrogram.types
