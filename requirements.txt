@@ -10,11 +10,4 @@ git+https://github.com/Joelkb/cinemagoer
 datetime
 pytz
 aiohttp
-youtube_search
-yt_dlp
-wget
-aiofiles
-youtubesearchpython
-youtube_dl
-pyrogram.errors
-pyrogram.types
+
