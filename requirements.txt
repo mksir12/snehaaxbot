@@ -12,3 +12,4 @@ pytz
 aiohttp
 ffmpeg
 youtube_dl
+youtube_search
