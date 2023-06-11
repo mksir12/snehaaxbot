@@ -11,3 +11,4 @@ datetime
 pytz
 aiohttp
 ffmpeg
+youtube_dl
