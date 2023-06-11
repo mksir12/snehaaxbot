@@ -10,6 +10,4 @@ git+https://github.com/Joelkb/cinemagoer
 datetime
 pytz
 aiohttp
-ffmpeg
-youtube_dl
-youtube_search
+eor
