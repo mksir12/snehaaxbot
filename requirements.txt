@@ -10,5 +10,3 @@ git+https://github.com/Joelkb/cinemagoer
 datetime
 pytz
 aiohttp
-eor
-beyond top-level package
