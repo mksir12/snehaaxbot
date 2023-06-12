@@ -11,8 +11,4 @@ datetime
 pytz
 aiohttp
 
-
-imageDraw
-imageFont
-
 PIL
