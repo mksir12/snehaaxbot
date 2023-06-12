@@ -11,7 +11,7 @@ datetime
 pytz
 aiohttp
 
-
-PIL import image
+import image
 imageDraw
 imageFont
+
