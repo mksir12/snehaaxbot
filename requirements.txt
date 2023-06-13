@@ -13,3 +13,4 @@ aiohttp
 telegram
 repo
 os
+yt_dlp
