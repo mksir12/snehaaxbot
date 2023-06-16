@@ -12,7 +12,7 @@ from pyrogram.types import *
 
 os.system("apt install git curl python3-pip ffmpeg -y")
 
-from FallenRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, START_IMG, SUPPORT_CHAT, pbot
+from info import BOT_NAME, BOT_USERNAME, OWNER_ID, START_IMG, SUPPORT_CHAT, pbot
 
 ##Copy from here 
 
