@@ -17,6 +17,7 @@ from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from Script import script 
+from assistbot import assist
 from datetime import date, datetime 
 import pytz
 
