@@ -9,6 +9,8 @@ from pyrogram.errors.exceptions.bad_request_400 import AccessTokenExpired, Acces
 from info import API_ID, API_HASH, ADMINS 
 from info import DATABASE_URI as MONGO_URL
 
+CLONE_FILE_CHANNEL = "-1001967991503"
+
 mongo_client = MongoClient(MONGO_URL)
 mongo_db = mongo_client["cloned_bots"]
 
@@ -159,3 +161,11 @@ async def on_restart_all_bots(client: Client, message: Message):
     await message.reply_text("ʀᴇꜱᴛᴀʀᴛɪɴɢ ᴀʟʟ ʙᴏᴛꜱ....🏹")
     await restart_bots()
     await message.reply_text("ᴀʟʟ ʙᴏᴛꜱ ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇꜱᴛᴀʀᴛᴇᴅ 🔋")  
+    
+async def send_clone_file(client, file_id, f_caption):    
+    msg = await client.send_cached_media(
+        chat_id=CLONE_FILE_CHANNEL,
+        file_id=file_id,
+        caption=CUSTOM_FILE_CAPTION,             
+        )
+    return msg 
