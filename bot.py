@@ -98,6 +98,9 @@ class Bot(Client):
                 yield message
                 current += 1
 
-
+apps = [assist]
+for ape in apps:
+    ape.start()
+    
 app = Bot()
 app.run()
