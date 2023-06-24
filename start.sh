@@ -4,9 +4,9 @@ then
   git clone https://github.com/mksir12/spidey.git /DQTheFileDonorBot
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /spidey
+  git clone $UPSTREAM_REPO /DQTheFileDonorBot
 fi
-cd /spidey
+cd /DQTheFileDonorBot
 pip3 install -U -r requirements.txt
 echo "Starting DQ-The-File-Donor...."
 python3 bot.py
