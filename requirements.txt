@@ -16,3 +16,4 @@ yt_dlp
 pykeyboard
 openai
 telegraph
+json
