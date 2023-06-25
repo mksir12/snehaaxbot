@@ -15,5 +15,5 @@ repo
 yt_dlp
 pykeyboard
 openai
-telegraph
+telegraph==2.2.0
 json
