@@ -12,7 +12,6 @@ pytz
 aiohttp
 telegram
 repo
-
 yt_dlp
 pykeyboard
 openai
