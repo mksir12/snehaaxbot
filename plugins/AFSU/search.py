@@ -3,7 +3,7 @@
 # (c) @VysakhTG
 
 from pyrogram import Client, filters
-from AFSU.engine import ask_ai
+from plugins.AFSU.engine import ask_ai
 
 
 @Client.on_message(filters.command('openai'))
