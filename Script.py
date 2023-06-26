@@ -184,7 +184,7 @@ Kasaba 2016 Malayalam ✅
 
 ❌ Kasaba Malayalam Full Movie ❌
 
-❌ Kasaba 2016 Malayalam Movie ❌
+❌ Kasaba 2016 Malayalam Movie ❌"""
 
     SINFO = """
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
