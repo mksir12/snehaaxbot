@@ -1215,6 +1215,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="👀"
+        )
+        await query.message.edit_text(
+            text="😌"
+        )
+        await query.message.edit_text(
+            text="✅️"
+        )
+        
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
