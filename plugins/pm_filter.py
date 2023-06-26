@@ -1250,20 +1250,32 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ SEARCHING...     10/𝟏𝟎𝟎%  ▬▬ ▭▭ ▭▭  ▭▭ ▭▭ ▭▭"
+            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%  ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ SEARCHING...     30/𝟏𝟎𝟎%  ▬▬ ▬▬ ▭▭  ▭▭ ▭▭ ▭▭"
+            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%  ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ SEARCHING...     40/𝟏𝟎𝟎%  ▬▬ ▬▬ ▭▭  ▭▭ ▭▭ ▭▭"
+            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%  ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ SEARCHING...     50/𝟏𝟎𝟎%  ▬▬ ▬▬ ▭▭  ▭▭ ▭▭ ▭▭"
+            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%  ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭""
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ SEARCHING...     60/𝟏𝟎𝟎%  ▬▬ ▬▬ ▭▭  ▭▭ ▭▭ ▭▭"
-        ) 
+            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%  ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%  ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%  ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%  ▬▬ ▬▬ ▬▬ ▬▭ ▭▭""
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%  ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
+        )
         
         await client.edit_message_media(
             query.message.chat.id, 
