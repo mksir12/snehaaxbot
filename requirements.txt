@@ -12,8 +12,15 @@ pytz
 aiohttp
 telegram
 repo
-yt_dlp
 pykeyboard
 openai
 gtts
 googletrans
+
+yt_dlp
+wget
+aiofiles
+ffmpeg
+youtube_search
+youtube-search-python==1.4.6
+youtube-dl
