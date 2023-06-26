@@ -1296,7 +1296,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://graph.org/file/6c2414b28034da94536be.jpg")
         )
         await query.message.edit_text(
             text=script.SOURCE_TXT,
@@ -1498,15 +1498,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
         )
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto("https://graph.org/file/6826a4ccc2876e5ee5104.jpg")
+        )
         await query.message.edit_text(
             text=(script.OWNER_INFO),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
         )
             
     elif query.data.startswith("setgs"):
