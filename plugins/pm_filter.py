@@ -1256,7 +1256,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ SEARCHING...   30/𝟏𝟎𝟎% ▬▬ ▬▬ ▭▭  ▭▭ ▭▭ ▭▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬  ▭▭ ▭▭ ▭▭ SEARCHING...   50/𝟏𝟎𝟎% ▬▬ ▬▬ ▬▬  ▭▭ ▭▭ ▭▭"
+            text="● ● ●"
         )
         await client.edit_message_media(
             query.message.chat.id, 
