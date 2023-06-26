@@ -1455,7 +1455,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/tgitzmedawn")
                   ]]
         reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
+        await query.message.edit_text(
             text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
         )
         await query.message.edit_text(
