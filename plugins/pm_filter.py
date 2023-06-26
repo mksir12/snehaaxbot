@@ -1488,16 +1488,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
         )
-            await query.message.edit_text(
-                text=(script.OWNER_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
+        await query.message.edit_text(
+            text=(script.OWNER_INFO),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
             
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
