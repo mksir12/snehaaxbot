@@ -1456,6 +1456,39 @@ async def cb_handler(client: Client, query: CallbackQuery):
                   ]]
         reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
+            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
+        )
+        await query.message.edit_text(
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
+        )
+            await query.message.edit_text(
                 text=(script.OWNER_INFO),
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
