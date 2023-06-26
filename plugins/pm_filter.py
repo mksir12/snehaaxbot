@@ -1250,9 +1250,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬  ▬▬ ▭▭ ▭▭
-                  SEARCHING...     𝟏𝟎𝟎/𝟏𝟎𝟎%
-                  ▬▬ ▬▬ ▬▬  ▬▬ ▭▭ ▭▭"
+            text="▬▬ ▬▬ ▬▬  ▬▬ ▭▭ ▭▭ SEARCHING...  𝟏𝟎𝟎/𝟏𝟎𝟎% ▬▬ ▬▬ ▬▬  ▬▬ ▭▭ ▭▭"              
         )
         await query.message.edit_text(
             text="● ● ◌"
