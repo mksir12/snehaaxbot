@@ -1274,13 +1274,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%     ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%     ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
         )
         await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
+            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%     ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
         )
         
         await client.edit_message_media(
