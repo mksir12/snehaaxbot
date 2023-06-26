@@ -15,3 +15,5 @@ repo
 yt_dlp
 pykeyboard
 openai
+gtts
+googletrans
