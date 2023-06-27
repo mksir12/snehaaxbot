@@ -1140,17 +1140,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('Bᴏᴛ Oᴡɴᴇʀ 👨🏻‍💻', callback_data="owner_info"),
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 🎬', url=GRP_LNK)
+                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="owner_info"),
+                    InlineKeyboardButton('* ʜᴇʟᴩ *', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('Hᴇʟᴘ 📚', callback_data='help'),
-                    InlineKeyboardButton('Aʙᴏᴜᴛ ♻️', callback_data='about'),
-
-                ],[
-                    InlineKeyboardButton('™️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ™️', url=CHNL_LNK), 
-                    InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='') 
+                    InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇy ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="moneyy") 
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1202,30 +1197,47 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "moneyy":
+        buttons = [[
+            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ ꜱᴜᴩᴩᴏʀᴛ', url="https://t.me/xax_ha_ha_l"),
+            InlineKeyboardButton('Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs', callback_data='global_filters')
+        ],[   
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MONEY_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "sett":
+        buttons = [[
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SETT_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('FIʟᴛᴇʀs', callback_data='filters'),
-            InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='store_file')
-        ], [
-            InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴ 🫂', callback_data='coct'),
-            InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅs 🛸', callback_data='extra')
-        ], [
-            InlineKeyboardButton('Hᴏᴍᴇ 🏡', callback_data='start'),
-            InlineKeyboardButton('Sᴛᴀᴛᴜs 📶', callback_data='stats')
+            InlineKeyboardButton('⟸ ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ꜱᴇᴛᴛɪɴɢꜱ', callback_data='sett')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="👀"
-        )
-        await query.message.edit_text(
-            text="😌"
-        )
-        await query.message.edit_text(
-            text="✅️"
-        )
-        
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1245,45 +1257,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Sᴛᴀᴛᴜs 📶', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
+        
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
-       
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
@@ -1294,40 +1273,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭  LOADING ...     10/100%  ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭  LOADING ...     20/100%  ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭  LOADING ...     30/100%  ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭  LOADING ...     40/100%  ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭  LOADING...     50/100%  ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭  LOADING...     55/100%  ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭  LOADING...     60/100%  ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭  LOADING...     70/100%  ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭  LOADING...     80/100%  ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭  LOADING...     90/100%  ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬  LOADING...     100/100%  ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
-        
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1335,7 +1280,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.SOURCE_TXT,
-            reply_markup=reply_markup,
+            reply_markup=replymarkup,
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "manuelfilter":
@@ -1344,44 +1289,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Bᴜᴛᴛᴏɴs', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-    )
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
+        
         await query.message.edit_text(
             text=script.MANUELFILTER_TXT,
             reply_markup=reply_markup,
@@ -1406,39 +1314,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
         ]]
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1454,39 +1329,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
         ]]
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1503,39 +1345,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('Aᴅᴍɪɴ', callback_data='admin')
         ]]
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1552,39 +1361,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
         ]]
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1599,41 +1375,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='extra')
+            InlineKeyboardButton('⟸ Bᴀᴄk', callback_data='extra')
         ]]
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1650,39 +1393,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about'),
             InlineKeyboardButton('⟲ Rᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
+        
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1731,39 +1442,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/tgitzmedawn")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     10/100%   ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     20/100%   ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     30/100%   ▬▬ ▭▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭ LOADING ...     40/100%   ▬▬ ▬▭ ▭▭ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▭▭ ▭▭ ▭▭ LOADING...     50/100%   ▬▬ ▬▬ ▭▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▭ ▭▭ ▭▭ LOADING...     55/100%   ▬▬ ▬▬ ▬▭ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▭▭ ▭▭ LOADING...     60/100%   ▬▬ ▬▬ ▬▬ ▭▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▭ ▭▭ LOADING...     70/100%   ▬▬ ▬▬ ▬▬ ▬▭ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▭▭ LOADING...     80/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▭▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▭ LOADING...     90/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▭"
-        )
-        await query.message.edit_text(
-            text="▬▬ ▬▬ ▬▬ ▬▬ ▬▬ LOADING...     100/100%   ▬▬ ▬▬ ▬▬ ▬▬ ▬▬"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
