@@ -24,8 +24,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="owner_info"),
-                    InlineKeyboardButton('* ʜᴇʟᴩ *', url=GRP_LNK)
+                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="about"),
+                    InlineKeyboardButton('* ʜᴇʟᴩ *', callback_data='help')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇy ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="moneyy") 
                   ]]
@@ -49,8 +49,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="owner_info"),
-                    InlineKeyboardButton('* ʜᴇʟᴩ *', url=GRP_LNK)
+                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="about"),
+                    InlineKeyboardButton('* ʜᴇʟᴩ *', callback_data='help')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇy ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="moneyy") 
                   ]]
@@ -94,8 +94,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="owner_info"),
-                    InlineKeyboardButton('* ʜᴇʟᴩ *', url=GRP_LNK)
+                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="about"),
+                    InlineKeyboardButton('* ʜᴇʟᴩ *', callback_data='help')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇy ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="moneyy") 
                   ]]
@@ -151,7 +151,7 @@ async def start(client, message):
                           InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                           InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/tgitzmedawn")
+                          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/xax_ha_ha_l")
                          ]
                         ]
                     )
@@ -170,7 +170,7 @@ async def start(client, message):
                           InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                           InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/tgitzmedawn")
+                          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/xax_ha_ha_l")
                          ]
                         ]
                     )
@@ -289,7 +289,7 @@ async def start(client, message):
                       InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                       InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                    ],[
-                      InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/tgitzmedawn")
+                      InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/xax_ha_ha_l")
                      ]
                     ]
                 )
@@ -343,7 +343,7 @@ async def start(client, message):
               InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
               InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
            ],[
-              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/tgitzmedawn")
+              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/xax_ha_ha_l")
              ]
             ]
         )
@@ -815,7 +815,7 @@ async def deletemultiplefiles(bot, message):
         parse_mode=enums.ParseMode.HTML
     )
 
-@Client.on_message(filters.command("shortlink") & filters.user(ADMINS))
+@Client.on_message(filters.command("set_shortner"))
 async def shortlink(bot, message):
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
