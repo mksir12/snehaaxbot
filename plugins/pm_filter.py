@@ -1199,10 +1199,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "moneyy":
         buttons = [[
-            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ ꜱᴜᴩᴩᴏʀᴛ', url="https://t.me/xax_ha_ha_l"),
-            InlineKeyboardButton('Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs', callback_data='global_filters')
+            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ ꜱᴜᴩᴩᴏʀᴛ', url="https://t.me/xax_ha_ha_l")
         ],[   
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ •', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1230,6 +1230,36 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "dissc":
+        buttons = [[
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.DISCLAIM_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "rulem":
+        buttons = [[
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.RULEM_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     
     elif query.data == "help":
         buttons = [[
@@ -1250,11 +1280,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 🎬', url=GRP_LNK),
-            InlineKeyboardButton('Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🙈', callback_data='source')
+            InlineKeyboardButton('ʀᴜʟᴇꜱ', callback_data='rulem'),
+            InlineKeyboardButton('ᴅɪꜱᴄʟᴀɪᴍᴇʀ', callback_data='dissc')
         ],[
-            InlineKeyboardButton('Hᴏᴍᴇ 🏡', callback_data='start'),
-            InlineKeyboardButton('Sᴛᴀᴛᴜs 📶', callback_data='stats')
+            InlineKeyboardButton('ʀᴇᴩᴏʀᴛ ʙᴜɢꜱ ᴀɴᴅ ꜰᴇᴇᴅʙᴀᴄᴋ', url="https://t.me/about_oggy")
+        ],[
+            InlineKeyboardButton('⟸ ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ ±', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         
