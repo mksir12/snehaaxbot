@@ -1217,7 +1217,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "sett":
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1232,7 +1232,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "dissc":
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1247,7 +1247,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "rulem":
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='filters')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
