@@ -1142,8 +1142,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="owner_info"),
-                    InlineKeyboardButton('* ʜᴇʟᴩ *', url=GRP_LNK)
+                    InlineKeyboardButton('✩ ᴀʙᴏᴜᴛ ✩', callback_data="about"),
+                    InlineKeyboardButton('* ʜᴇʟᴩ *', callback_data='help')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇy ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="moneyy") 
                   ]]
